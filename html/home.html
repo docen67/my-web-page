@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+
+<head lang="en">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <title>D67</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+
+  <style media="screen">
+  @media screen and (max-width: 600px) {
+.mymenu a:not(:first-child) {display: none;}
+.mymenu a.icon {
+  float: right;
+  display: block;
+}
+}
+
+@media screen and (max-width: 600px) {
+.mymenu.responsive {position: relative;}
+.mymenu.responsive a {
+  float: none;
+  display: block;
+  text-align: left;
+}
+
+}
+  </style>
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="well visible-desktop">
+          <div id="header">
+            <ul class="mymenu" id="menu">
+              <a href="#" id="logo" class="active">D67</a>
+              <li><a href="#"><span>Articulos</span></a></li>
+              <li><a href="#"><span>Tutoriales</span></a></li>
+              <li><a href="#"><span>Conoce</span></a></li>
+              <li><a href="#"><span>Contacto</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--
+    <div id="slider"  class="carousel">
+      <img class="slides" src="C:\xampp\htdocs\projects web\my web page\html\images\image1.jpg" alt="D67">
+      <img class="slides" src="C:\xampp\htdocs\projects web\my web page\html\images\image2.jpg" alt="D67">
+      <img class="slides" src="C:\xampp\htdocs\projects web\my web page\html\images\image3.jpg" alt="D67">
+      <img class="slides" src="C:\xampp\htdocs\projects web\my web page\html\images\image4.jpg" alt="D67">
+      <img class="slides" src="C:\xampp\htdocs\projects web\my web page\html\images\image5.jpg" alt="D67">
+    </div>
+-->
+  </div>
+
+
+
+
+    <script>
+  var myIndex = 0;
+  carousel();
+
+  function carousel() {
+
+    var i;
+    var x = document.getElementsByClassName("slides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+  }
+   </script>
+
+   <script>
+ function myFunction() {
+     var x = document.getElementById("mymenu");
+     if (x.className === "mymenu") {
+         x.className += " responsive";
+     } else {
+         x.className = "mymenu";
+     }
+ }
+ </script>
+
+</body>
+
+</html>
